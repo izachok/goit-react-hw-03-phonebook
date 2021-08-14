@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 export default function FormButton({
   type = 'button',
-  label,
   onClick,
   disabled = false,
+  children,
 }) {
   return (
     <button
@@ -15,14 +15,15 @@ export default function FormButton({
       disabled={disabled}
       onClick={onClick}
     >
-      {label}
+      {children}
     </button>
   );
 }
 
 FormButton.propTypes = {
   type: PropTypes.string,
-  label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    .isRequired,
 };

@@ -55,7 +55,7 @@ export class ContactForm extends Component {
                 className={s.validatorError}
               />
             </label>
-            <FormButton type="submit" label="Add contact" />
+            <FormButton type="submit">Add contact</FormButton>
           </Form>
         </Formik>
       </div>

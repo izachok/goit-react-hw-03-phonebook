@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdDelete } from 'react-icons/md';
 import FormButton from '../FormButton';
 import s from './ContactList.module.css';
 import PropTypes from 'prop-types';
@@ -10,7 +11,9 @@ export default function ContactList({ contacts, onDeleteContact }) {
         <li key={id} className={s.item}>
           <span className={s.itemName}>{name}</span>
           <span className={s.itemPhone}>{phoneNumber}</span>
-          <FormButton label="Delete" onClick={() => onDeleteContact(id)} />
+          <FormButton onClick={() => onDeleteContact(id)}>
+            <MdDelete size="18" />
+          </FormButton>
         </li>
       ))}
     </ul>

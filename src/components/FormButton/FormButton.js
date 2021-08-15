@@ -7,6 +7,7 @@ export default function FormButton({
   onClick,
   disabled = false,
   children,
+  ...allyProps
 }) {
   return (
     <button
@@ -14,6 +15,7 @@ export default function FormButton({
       className={s.button}
       disabled={disabled}
       onClick={onClick}
+      {...allyProps}
     >
       {children}
     </button>

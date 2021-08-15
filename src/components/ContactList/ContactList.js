@@ -11,7 +11,10 @@ export default function ContactList({ contacts, onDeleteContact }) {
         <li key={id} className={s.item}>
           <span className={s.itemName}>{name}</span>
           <span className={s.itemPhone}>{phoneNumber}</span>
-          <FormButton onClick={() => onDeleteContact(id)}>
+          <FormButton
+            onClick={() => onDeleteContact(id)}
+            aria-label="Delete contact"
+          >
             <MdDelete size="18" />
           </FormButton>
         </li>
